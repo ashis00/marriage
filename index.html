@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
 <body>
   <!-- Envelope intro / loader -->
@@ -50,9 +50,18 @@
         <span class="door-name">Home</span>
       </button>
 
+      <button class="door door-special" data-room="engagement" style="--accent:#c98aa6">
+        <span class="door-panel">
+          <span class="door-light">&#128141;</span>
+          <span class="leaf leaf-l"><i class="knob"></i></span>
+          <span class="leaf leaf-r"><i class="knob"></i></span>
+        </span>
+        <span class="door-name">Engagement</span>
+      </button>
+
       <button class="door" data-room="story" style="--accent:#c9a96a">
         <span class="door-panel">
-          <span class="door-light">&#128214;</span>
+          <span class="door-light">&#127916;</span>
           <span class="leaf leaf-l"><i class="knob"></i></span>
           <span class="leaf leaf-r"><i class="knob"></i></span>
         </span>
@@ -61,7 +70,7 @@
 
       <button class="door" data-room="details" style="--accent:#b5636f">
         <span class="door-panel">
-          <span class="door-light">&#128141;</span>
+          <span class="door-light">&#128214;</span>
           <span class="leaf leaf-l"><i class="knob"></i></span>
           <span class="leaf leaf-r"><i class="knob"></i></span>
         </span>
@@ -119,6 +128,23 @@
           <span class="ring ring-1"></span>
           <span class="ring ring-2"></span>
         </div>
+
+        <div class="stage house-stage" aria-hidden="true">
+          <div class="house">
+            <div class="house-roof"></div>
+            <div class="house-chimney"></div>
+            <div class="house-body">
+              <div class="house-glow"></div>
+              <div class="house-couple">&#128105;&#8205;&#10084;&#65039;&#8205;&#128104;</div>
+              <div class="house-door"><i class="house-knob"></i></div>
+              <div class="house-window wl"></div>
+              <div class="house-window wr"></div>
+            </div>
+            <div class="house-step"></div>
+          </div>
+          <div class="house-welcome">Welcome Home &#127968;</div>
+        </div>
+
         <p class="hero-pretitle reveal">Welcome to our celebration</p>
         <h2 class="hero-names">
           <span class="name reveal" style="--d:.1s">Ashish</span>
@@ -126,13 +152,46 @@
           <span class="name reveal" style="--d:.5s">Anwesha</span>
         </h2>
         <p class="hero-subtitle reveal" style="--d:.7s">request the pleasure of your company</p>
-        <p class="hero-date reveal" style="--d:.9s">14 December 2026 &middot; Udaipur, India</p>
+        <p class="hero-date reveal" style="--d:.9s">15 January 2027 &middot; Udaipur, India</p>
         <h3 class="section-script reveal" style="--d:1s">Counting down to forever</h3>
         <div class="countdown" id="countdown">
           <div class="count-box reveal"><span id="days">00</span><small>Days</small></div>
           <div class="count-box reveal" style="--d:.1s"><span id="hours">00</span><small>Hours</small></div>
           <div class="count-box reveal" style="--d:.2s"><span id="minutes">00</span><small>Minutes</small></div>
           <div class="count-box reveal" style="--d:.3s"><span id="seconds">00</span><small>Seconds</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement -->
+  <section class="room room-engagement" id="room-engagement" hidden aria-label="Engagement">
+    <button class="room-back" data-close type="button">&larr; Back to Hall</button>
+    <div class="room-scroll">
+      <div class="room-inner engage-inner">
+        <p class="section-eyebrow reveal">The Beginning of Forever</p>
+        <h2 class="section-title reveal">Our Engagement</h2>
+
+        <div class="stage hands-stage" aria-hidden="true">
+          <div class="hand hand-left">
+            <span class="ring-drop">&#128141;</span>
+            <span class="palm">&#129777;</span>
+          </div>
+          <div class="meet-heart">&#10084;</div>
+          <div class="sparkle sp1">&#10024;</div>
+          <div class="sparkle sp2">&#10024;</div>
+          <div class="sparkle sp3">&#10024;</div>
+          <div class="hand hand-right">
+            <span class="palm">&#129778;</span>
+            <span class="ring-drop">&#128141;</span>
+          </div>
+        </div>
+
+        <div class="engage-date reveal" style="--d:2.4s">
+          <span class="barat-flourish">&#10047;</span>
+          <p class="barat-date-label">Ring Ceremony</p>
+          <h3 class="barat-date-day">29 November 2026</h3>
+          <p class="barat-date-place">Two hearts, one promise &mdash; sealed with a ring</p>
         </div>
       </div>
     </div>
@@ -145,8 +204,19 @@
       <div class="room-inner">
         <p class="section-eyebrow reveal">Our Journey</p>
         <h2 class="section-title reveal">How We Met</h2>
+        <div class="stage reel-stage" aria-hidden="true">
+          <div class="reel-film">
+            <div class="reel-perf top"></div>
+            <div class="reel-frames">
+              <span>&#128144;</span><span>&#127881;</span><span>&#10084;</span><span>&#9728;</span><span>&#128141;</span>
+            </div>
+            <div class="reel-perf bottom"></div>
+          </div>
+          <div class="reel-clapper">&#127916;</div>
+          <div class="reel-play">&#9658;</div>
+        </div>
         <div class="timeline">
-          <div class="timeline-item reveal">
+          <div class="timeline-item reveal" style="--d:1.5s">
             <div class="timeline-dot">&#10084;</div>
             <div class="timeline-card">
               <h3>First Glance</h3>
@@ -154,7 +224,7 @@
               <p>A rainy evening, a shared umbrella, and a conversation that never quite ended.</p>
             </div>
           </div>
-          <div class="timeline-item reveal" style="--d:.15s">
+          <div class="timeline-item reveal" style="--d:1.7s">
             <div class="timeline-dot">&#9728;</div>
             <div class="timeline-card">
               <h3>The First Trip</h3>
@@ -162,7 +232,7 @@
               <p>Mountains, mischief, and the moment we knew this was the adventure of a lifetime.</p>
             </div>
           </div>
-          <div class="timeline-item reveal" style="--d:.3s">
+          <div class="timeline-item reveal" style="--d:1.9s">
             <div class="timeline-dot">&#128141;</div>
             <div class="timeline-card">
               <h3>The Proposal</h3>
@@ -182,20 +252,28 @@
       <div class="room-inner">
         <p class="section-eyebrow reveal">Save the Date</p>
         <h2 class="section-title reveal">Wedding Events</h2>
+        <div class="stage book-stage" aria-hidden="true">
+          <div class="book">
+            <div class="book-spine"></div>
+            <div class="book-page page-base"></div>
+            <div class="book-cover cover-left">&#10047;</div>
+            <div class="book-cover cover-right">&#128141;</div>
+          </div>
+        </div>
         <div class="detail-cards">
-          <article class="detail-card reveal">
+          <article class="detail-card reveal" style="--d:1.5s">
             <div class="detail-icon">&#127881;</div>
             <h3>Mehndi &amp; Sangeet</h3>
             <p class="detail-when">Dec 12, 2026 &middot; 6:00 PM</p>
             <p class="detail-where">The Garden Courtyard<br />Lake Palace Road, Udaipur</p>
           </article>
-          <article class="detail-card reveal" style="--d:.15s">
+          <article class="detail-card reveal" style="--d:1.7s">
             <div class="detail-icon">&#128144;</div>
             <h3>The Ceremony</h3>
             <p class="detail-when">Dec 14, 2026 &middot; 10:00 AM</p>
             <p class="detail-where">Jagmandir Island Palace<br />Lake Pichola, Udaipur</p>
           </article>
-          <article class="detail-card reveal" style="--d:.3s">
+          <article class="detail-card reveal" style="--d:1.9s">
             <div class="detail-icon">&#127863;</div>
             <h3>Reception</h3>
             <p class="detail-when">Dec 14, 2026 &middot; 7:30 PM</p>
@@ -213,15 +291,25 @@
       <div class="room-inner">
         <p class="section-eyebrow reveal">Moments</p>
         <h2 class="section-title reveal">Our Gallery</h2>
-        <div class="gallery-grid">
-          <figure class="gallery-item reveal" style="--c:#f6d4d8"><span>&#10084;</span></figure>
-          <figure class="gallery-item reveal" style="--c:#e8d9b5;--d:.1s"><span>&#127800;</span></figure>
-          <figure class="gallery-item reveal" style="--c:#d8e3d1;--d:.2s"><span>&#128141;</span></figure>
-          <figure class="gallery-item reveal" style="--c:#e6d2e8;--d:.3s"><span>&#127881;</span></figure>
-          <figure class="gallery-item reveal" style="--c:#f3dcc6;--d:.4s"><span>&#9728;</span></figure>
-          <figure class="gallery-item reveal" style="--c:#d2e0ec;--d:.5s"><span>&#127870;</span></figure>
+        <div class="stage cam-stage" aria-hidden="true">
+          <div class="drone">
+            <div class="drone-arm arm-l"><span class="prop"></span></div>
+            <div class="drone-arm arm-r"><span class="prop"></span></div>
+            <div class="drone-body">&#128641;</div>
+            <div class="drone-cam">&#128247;</div>
+          </div>
+          <div class="cam-flash"></div>
+          <div class="film-reel">&#127902;</div>
         </div>
-        <p class="gallery-note reveal">Replace these tiles with your favourite photographs.</p>
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal" style="--c:#f6d4d8;--d:1.8s"><span>&#10084;</span></figure>
+          <figure class="gallery-item reveal" style="--c:#e8d9b5;--d:1.9s"><span>&#127800;</span></figure>
+          <figure class="gallery-item reveal" style="--c:#d8e3d1;--d:2s"><span>&#128141;</span></figure>
+          <figure class="gallery-item reveal" style="--c:#e6d2e8;--d:2.1s"><span>&#127881;</span></figure>
+          <figure class="gallery-item reveal" style="--c:#f3dcc6;--d:2.2s"><span>&#9728;</span></figure>
+          <figure class="gallery-item reveal" style="--c:#d2e0ec;--d:2.3s"><span>&#127870;</span></figure>
+        </div>
+        <p class="gallery-note reveal" style="--d:2.4s">Replace these tiles with your favourite photographs.</p>
       </div>
     </div>
   </section>
@@ -233,9 +321,18 @@
       <div class="room-inner">
         <p class="section-eyebrow reveal">Share the Love</p>
         <h2 class="section-title reveal">Wishes Wall</h2>
-        <p class="wishes-intro reveal">Leave a blessing for the couple &mdash; it will float across the wall for everyone to enjoy.</p>
+        <div class="stage cute-stage" aria-hidden="true">
+          <div class="cute-bird bird-l">&#128038;</div>
+          <div class="cute-heart">&#128150;</div>
+          <div class="cute-bird bird-r">&#128038;</div>
+          <span class="cute-pop cp1">&#10024;</span>
+          <span class="cute-pop cp2">&#127800;</span>
+          <span class="cute-pop cp3">&#128150;</span>
+          <span class="cute-pop cp4">&#10024;</span>
+        </div>
+        <p class="wishes-intro reveal" style="--d:1.4s">Leave a blessing for the couple &mdash; it will float across the wall for everyone to enjoy.</p>
 
-        <form class="wish-form reveal" id="wishForm" novalidate>
+        <form class="wish-form reveal" id="wishForm" style="--d:1.6s" novalidate>
           <div class="field">
             <input type="text" id="wishName" name="wishName" maxlength="40" required placeholder=" " />
             <label for="wishName">Your Name</label>
@@ -355,6 +452,6 @@
     <button type="button" id="adminLogout">Log out</button>
   </div>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

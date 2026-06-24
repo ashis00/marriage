@@ -39,6 +39,16 @@
     });
   }
 
+  // Re-trigger each room's CSS intro animation (.stage) every time it opens
+  function playRoomStages(room) {
+    var stages = room.querySelectorAll(".stage");
+    stages.forEach(function (stage) {
+      stage.classList.remove("play");
+      void stage.offsetWidth; // reflow so the animation restarts
+      stage.classList.add("play");
+    });
+  }
+
   function openRoom(name, door) {
     var room = document.getElementById("room-" + name);
     if (!room) return;
@@ -53,6 +63,7 @@
       void room.offsetWidth;
       room.classList.add("show");
       revealRoomContent(room);
+      playRoomStages(room);
       var scroll = room.querySelector(".room-scroll");
       if (scroll) scroll.scrollTop = 0;
       if (name === "barat") runBarat();
@@ -140,7 +151,7 @@
   }
 
   /* ---------- Countdown ---------- */
-  var weddingDate = new Date("2026-12-14T10:00:00").getTime();
+  var weddingDate = new Date("2027-01-15T10:00:00").getTime();
   var elDays = document.getElementById("days");
   var elHours = document.getElementById("hours");
   var elMinutes = document.getElementById("minutes");
