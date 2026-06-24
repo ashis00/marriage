@@ -1,5 +1,5 @@
 /* ===========================================================
-   Ashish & Anwesha — Wedding Invitation
+   Anwesha & Ashish — Wedding Invitation
    Interactive "wedding hall" with clickable doors.
    Vanilla JS · no dependencies · performance-friendly
    =========================================================== */
