@@ -155,6 +155,7 @@ body {
   font-size: 1.9rem;
   color: var(--rose-deep);
   text-decoration: none;
+  margin-right: auto;
 }
 .nav-links {
   display: flex;
@@ -197,6 +198,21 @@ body {
   background: var(--ink);
   transition: transform 0.3s, opacity 0.3s;
 }
+
+/* Discreet admin login trigger (top-right) */
+.nav-admin {
+  margin-left: 1.6rem;
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-soft);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+.nav-admin:hover { opacity: 1; color: var(--rose-deep); transform: scale(1.15); }
+body.admin-on .nav-admin { opacity: 1; color: var(--rose-deep); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -618,6 +634,7 @@ body.admin-on .wish-card .wish-delete { display: flex; }
   backdrop-filter: blur(4px);
   animation: fadeIn 0.3s ease;
 }
+.modal-overlay[hidden] { display: none; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .modal {
   position: relative;
@@ -686,6 +703,7 @@ body.admin-on .wish-card .wish-delete { display: flex; }
   transition: background 0.3s;
 }
 .admin-bar button:hover { background: var(--rose-deep); }
+.admin-bar[hidden] { display: none; }
 
 /* ---------- RSVP ---------- */
 .rsvp { background: linear-gradient(135deg, var(--blush) 0%, #fff 100%); }.rsvp-form {
