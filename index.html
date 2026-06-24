@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="You are cordially invited to celebrate the wedding of Aarav & Isha." />
+  <title>Aarav &amp; Isha · Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Envelope intro / loader -->
+  <div class="envelope-overlay" id="envelope">
+    <div class="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+      <div class="envelope-letter">
+        <span class="script">You're Invited</span>
+        <span class="tap-hint">Tap to open</span>
+      </div>
+      <div class="envelope-heart">&#10084;</div>
+    </div>
+  </div>
+
+  <!-- Falling petals canvas -->
+  <canvas class="petals" id="petals" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-brand">A &amp; I</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#wishes">Wishes</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-rings" aria-hidden="true">
+      <span class="ring ring-1"></span>
+      <span class="ring ring-2"></span>
+    </div>
+    <div class="hero-content">
+      <p class="hero-pretitle reveal">Together with their families</p>
+      <h1 class="hero-names">
+        <span class="name reveal" style="--d:.1s">Aarav</span>
+        <span class="amp reveal" style="--d:.3s">&amp;</span>
+        <span class="name reveal" style="--d:.5s">Isha</span>
+      </h1>
+      <p class="hero-subtitle reveal" style="--d:.7s">request the pleasure of your company</p>
+      <p class="hero-date reveal" style="--d:.9s">December 14, 2026 &middot; Udaipur, India</p>
+      <a href="#rsvp" class="btn reveal" style="--d:1.1s">RSVP</a>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Countdown -->
+  <section class="countdown-section">
+    <h2 class="section-script reveal">Counting down to forever</h2>
+    <div class="countdown" id="countdown">
+      <div class="count-box reveal"><span id="days">00</span><small>Days</small></div>
+      <div class="count-box reveal" style="--d:.1s"><span id="hours">00</span><small>Hours</small></div>
+      <div class="count-box reveal" style="--d:.2s"><span id="minutes">00</span><small>Minutes</small></div>
+      <div class="count-box reveal" style="--d:.3s"><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="story" id="story">
+    <p class="section-eyebrow reveal">Our Journey</p>
+    <h2 class="section-title reveal">How We Met</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">&#10084;</div>
+        <div class="timeline-card">
+          <h3>First Glance</h3>
+          <span class="timeline-date">Spring 2019</span>
+          <p>A rainy evening, a shared umbrella, and a conversation that never quite ended.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">&#9728;</div>
+        <div class="timeline-card">
+          <h3>The First Trip</h3>
+          <span class="timeline-date">Summer 2021</span>
+          <p>Mountains, mischief, and the moment we knew this was the adventure of a lifetime.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">&#128141;</div>
+        <div class="timeline-card">
+          <h3>The Proposal</h3>
+          <span class="timeline-date">Winter 2025</span>
+          <p>Under a sky full of stars, one question changed everything: forever, yes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="details" id="details">
+    <p class="section-eyebrow reveal">Save the Date</p>
+    <h2 class="section-title reveal">Wedding Events</h2>
+    <div class="detail-cards">
+      <article class="detail-card reveal">
+        <div class="detail-icon">&#127881;</div>
+        <h3>Mehndi &amp; Sangeet</h3>
+        <p class="detail-when">Dec 12, 2026 &middot; 6:00 PM</p>
+        <p class="detail-where">The Garden Courtyard<br />Lake Palace Road, Udaipur</p>
+      </article>
+      <article class="detail-card reveal" style="--d:.15s">
+        <div class="detail-icon">&#128144;</div>
+        <h3>The Ceremony</h3>
+        <p class="detail-when">Dec 14, 2026 &middot; 10:00 AM</p>
+        <p class="detail-where">Jagmandir Island Palace<br />Lake Pichola, Udaipur</p>
+      </article>
+      <article class="detail-card reveal" style="--d:.3s">
+        <div class="detail-icon">&#127863;</div>
+        <h3>Reception</h3>
+        <p class="detail-when">Dec 14, 2026 &middot; 7:30 PM</p>
+        <p class="detail-where">The Grand Ballroom<br />City Palace, Udaipur</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <p class="section-eyebrow reveal">Moments</p>
+    <h2 class="section-title reveal">Our Gallery</h2>
+    <div class="gallery-grid">
+      <figure class="gallery-item reveal" style="--c:#f6d4d8"><span>&#10084;</span></figure>
+      <figure class="gallery-item reveal" style="--c:#e8d9b5;--d:.1s"><span>&#127800;</span></figure>
+      <figure class="gallery-item reveal" style="--c:#d8e3d1;--d:.2s"><span>&#128141;</span></figure>
+      <figure class="gallery-item reveal" style="--c:#e6d2e8;--d:.3s"><span>&#127881;</span></figure>
+      <figure class="gallery-item reveal" style="--c:#f3dcc6;--d:.4s"><span>&#9728;</span></figure>
+      <figure class="gallery-item reveal" style="--c:#d2e0ec;--d:.5s"><span>&#127870;</span></figure>
+    </div>
+    <p class="gallery-note reveal">Replace these tiles with your favourite photographs.</p>
+  </section>
+
+  <!-- Wishes wall -->
+  <section class="wishes" id="wishes">
+    <p class="section-eyebrow reveal">Share the Love</p>
+    <h2 class="section-title reveal">Wishes Wall</h2>
+    <p class="wishes-intro reveal">Leave a blessing for the couple &mdash; it will float across the wall for everyone to enjoy.</p>
+
+    <form class="wish-form reveal" id="wishForm" novalidate>
+      <div class="field">
+        <input type="text" id="wishName" name="wishName" maxlength="40" required placeholder=" " />
+        <label for="wishName">Your Name</label>
+      </div>
+      <div class="field">
+        <input type="text" id="wishText" name="wishText" maxlength="160" required placeholder=" " />
+        <label for="wishText">Your Wish</label>
+      </div>
+      <button type="submit" class="btn">Post Wish &#10084;</button>
+    </form>
+
+    <div class="wish-marquee" id="wishMarquee" aria-live="polite">
+      <div class="wish-track" id="wishTrack"></div>
+    </div>
+    <p class="wishes-empty" id="wishesEmpty">No wishes yet &mdash; be the first to share one!</p>
+
+    <button class="admin-link" id="adminLink" type="button">Admin</button>
+  </section>
+
+  <!-- Admin login modal -->
+  <div class="modal-overlay" id="adminModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <button class="modal-close" id="adminClose" aria-label="Close">&times;</button>
+      <h3 id="adminTitle" class="modal-title">Admin Login</h3>
+      <form id="adminForm" class="admin-form">
+        <div class="field">
+          <input type="text" id="adminUser" autocomplete="username" required placeholder=" " />
+          <label for="adminUser">Username</label>
+        </div>
+        <div class="field">
+          <input type="password" id="adminPass" autocomplete="current-password" required placeholder=" " />
+          <label for="adminPass">Password</label>
+        </div>
+        <p class="admin-error" id="adminError" hidden>Incorrect username or password.</p>
+        <button type="submit" class="btn btn-full">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <p class="section-eyebrow reveal">Will You Join Us?</p>
+    <h2 class="section-title reveal">RSVP</h2>
+    <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+      <div class="field">
+        <input type="text" id="guestName" name="name" required placeholder=" " />
+        <label for="guestName">Your Name</label>
+      </div>
+      <div class="field">
+        <input type="email" id="guestEmail" name="email" required placeholder=" " />
+        <label for="guestEmail">Email Address</label>
+      </div>
+      <div class="field">
+        <select id="attending" name="attending" required>
+          <option value="" disabled selected hidden></option>
+          <option value="yes">Joyfully Accepts</option>
+          <option value="no">Regretfully Declines</option>
+        </select>
+        <label for="attending" class="select-label">Will you attend?</label>
+      </div>
+      <div class="field">
+        <input type="number" id="guests" name="guests" min="1" max="10" value="1" />
+        <label for="guests">Number of Guests</label>
+      </div>
+      <div class="field field-full">
+        <textarea id="message" name="message" rows="3" placeholder=" "></textarea>
+        <label for="message">A note for the couple (optional)</label>
+      </div>
+      <button type="submit" class="btn btn-full">Send RSVP</button>
+      <p class="rsvp-success" id="rsvpSuccess" hidden>Thank you! Your RSVP has been received. &#10084;</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-script">Aarav &amp; Isha</p>
+    <p class="footer-date">14 . 12 . 2026</p>
+    <p class="footer-note">Made with love &#10084;</p>
+  </footer>
+
+  <!-- Admin status bar (shown when logged in) -->
+  <div class="admin-bar" id="adminBar" hidden>
+    <span>Admin mode &middot; tap a wish&rsquo;s &times; to delete</span>
+    <button type="button" id="adminLogout">Log out</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
