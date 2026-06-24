@@ -1,0 +1,18 @@
+server {
+    listen ${PORT};
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # Serve files directly; fall back to index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Long cache for static assets
+    location ~* \.(?:css|js|png|jpg|jpeg|gif|svg|ico|webp|woff2?)$ {
+        expires 7d;
+        add_header Cache-Control "public";
+    }
+}
